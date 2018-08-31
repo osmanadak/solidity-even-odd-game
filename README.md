@@ -1,1 +1,1 @@
-# solidity-even-odd-game
+# Solidity even odd game
