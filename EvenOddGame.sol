@@ -1,5 +1,3 @@
-//A game won when an even number arrives
-
 pragma solidity ^0.4.18;
 
 contract EvenOddGame {
@@ -36,10 +34,15 @@ contract EvenOddGame {
     }
     
     function setOwnerAddress(address newOwnerAddress) public {
+        require(ownerAddress == msg.sender);
         ownerAddress = newOwnerAddress;
     }
     
     function getContractBalance () public view returns(uint256) {
         return this.balance;
+    }
+    
+    function getOwnerAddress () public view returns(address) {
+        return ownerAddress;
     }
 }
